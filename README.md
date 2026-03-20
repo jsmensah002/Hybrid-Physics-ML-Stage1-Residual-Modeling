@@ -18,6 +18,9 @@ Final Model Comparison:
 - Hybrid Model: RMSE 0.0073, MAE 0.0053, MAPE 0.67%, R² 1.0000
 - The hybrid model reduced average prediction error from 37.99% to 0.67% by correcting the systematic gap caused by the documented k underestimating the true reaction rate.
 
+Visual Fit:
+- The final plot demonstrates near perfect alignment between the hybrid model predictions and actual sensor readings. The actual concentration curve is almost entirely obscured by the hybrid prediction line, indicating that the model tracks real reactor behaviour with exceptional accuracy across the full 12,000 second operating window. This level of fit is reflected in the R² of 1.0000 and MAPE of 0.67%, confirming that the physics baseline combined with the XGBoost correction layer accounts for virtually all systematic and operational variation in the reactor concentration data.
+
 SHAP Explainability:
 - SHAP analysis on the correction layer identified elapsed time as the dominant driver of the physics gap, followed by feed flow rate and temperature.
 
