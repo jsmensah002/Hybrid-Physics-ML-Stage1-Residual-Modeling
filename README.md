@@ -15,7 +15,7 @@ Correction Layer Model Selection:
 
 Final Model Comparison:
 - Physics Only: RMSE = 0.3277, MAE = 0.3119, MAPE = 37.99%, R² = 0.9352
-- Hybrid Model: RMSE = 0.0073, MAE = 0.0053, MAPE = 0.67%, R² = 1.0000
+- Hybrid Model (Physics + ML corrections): RMSE = 0.0073, MAE = 0.0053, MAPE = 0.67%, R² = 1.0000
 - The hybrid model reduced average prediction error from 37.99% to 0.67% by correcting the systematic gap caused by the documented k underestimating the true reaction rate.
 
 Visual Fit:
