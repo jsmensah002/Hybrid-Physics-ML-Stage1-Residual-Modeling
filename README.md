@@ -8,14 +8,14 @@ Method:
 - Sensor data consisting of 600 readings taken every 20 seconds was loaded and sorted chronologically. A physics baseline was generated using the first order reaction kinetics equation with the researched k value. The residual, defined as actual concentration minus physics prediction, was computed at every timestamp. Three different ML models were tested to see which one best learns the gap between the physics prediction and the actual sensor readings: Linear Regression, Gradient Boosting, and XGBoost. Model selection was based on RMSE and R² performance on the residual.
 
 Correction Layer Model Selection:
-- Linear Regression: RMSE 0.0938, MAE 0.0758, R² 0.1402
-- Gradient Boosting: RMSE 0.0389, MAE 0.0310, R² 0.8522
-- XGBoost: RMSE 0.0073, MAE 0.0053, R² 0.9949
+- Linear Regression: RMSE = 0.0938, MAE = 0.0758, R² = 0.1402
+- Gradient Boosting: RMSE = 0.0389, MAE = 0.0310, R² = 0.8522
+- XGBoost: RMSE = 0.0073, MAE = 0.0053, R² = 0.9949
 - XGBoost was selected as the correction layer based on superior performance across all metrics. The final hybrid prediction combines the physics baseline with the XGBoost correction. SHAP explainability was applied to the correction layer to identify which features most drove the physics gap.
 
 Final Model Comparison:
-- Physics Only: RMSE 0.3277, MAE 0.3119, MAPE 37.99%, R² 0.9352
-- Hybrid Model: RMSE 0.0073, MAE 0.0053, MAPE 0.67%, R² 1.0000
+- Physics Only: RMSE = 0.3277, MAE = 0.3119, MAPE = 37.99%, R² = 0.9352
+- Hybrid Model: RMSE = 0.0073, MAE = 0.0053, MAPE = 0.67%, R² = 1.0000
 - The hybrid model reduced average prediction error from 37.99% to 0.67% by correcting the systematic gap caused by the documented k underestimating the true reaction rate.
 
 Visual Fit:
