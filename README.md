@@ -11,7 +11,7 @@ Correction Layer Model Selection:
 - Linear Regression: RMSE = 0.0938, MAE = 0.0758, R² = 0.1402
 - Gradient Boosting: RMSE = 0.0389, MAE = 0.0310, R² = 0.8522
 - XGBoost: RMSE = 0.0073, MAE = 0.0053, R² = 0.9949
-- XGBoost was selected as the correction layer based on superior performance across all metrics. The final hybrid prediction combines the physics baseline with the XGBoost correction. SHAP explainability was applied to the correction layer to identify which features most drove the physics gap.
+- XGBoost was selected as the correction layer based on superior performance across all metrics. The final hybrid prediction combines the physics baseline with the XGBoost correction. SHAP explainability was applied to the correction layer to identify which features drive the physics gap the most.
 
 Final Model Comparison:
 - Physics Only: RMSE = 0.3277, MAE = 0.3119, MAPE = 37.99%, R² = 0.9352
